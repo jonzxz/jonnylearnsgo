@@ -34,16 +34,19 @@ func main() {
 
 	// since floats and int don't go well together in golang
 	// explicit typecasting is required
-	fmt.Printf("average is: %.2f\n", sum/float64(n))
+	fmt.Printf("average is: %.2f\n", countAverage(sum, n))
+}
+
+func countAverage(sum float64, n int) float64 {
+	return sum / float64(n)
 }
 
 func declareStuff() {
 	a := 2
 	b := 3.1
 
-	// %V for more verbose valuetype, otherwise use %v
-	fmt.Printf("a: %T, a: %V\n", a, a)
-	fmt.Printf("b: %T, b: %V\n", b, b)
+	fmt.Printf("a: %T, a: %v\n", a, a)
+	fmt.Printf("b: %T, b: %v\n", b, b)
 
 	// %[1] says to reuse the first parameter, so in this case instead
 	// of ("%T %v", a , a) it can just be ("%T %V", a) because %V uses arg number 1
