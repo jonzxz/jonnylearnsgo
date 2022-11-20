@@ -1,6 +1,6 @@
 package hello
 
-// Execute with go test
+// Execute with go tests
 import (
 	"testing"
 )
